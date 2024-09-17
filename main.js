@@ -9,6 +9,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+<<<<<<< HEAD
 /***/ "./js/modules/AnimaScroll.js":
 /*!***********************************!*\
   !*** ./js/modules/AnimaScroll.js ***!
@@ -20,6 +21,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+=======
+>>>>>>> main
 /***/ "./js/modules/InitAccordion.js":
 /*!*************************************!*\
   !*** ./js/modules/InitAccordion.js ***!
@@ -31,6 +34,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./js/modules/InitAnimaScroll.js":
+/*!***************************************!*\
+  !*** ./js/modules/InitAnimaScroll.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAnimaScroll)\n/* harmony export */ });\nfunction initAnimaScroll() {\n  var sections = document.querySelectorAll('[data-anime=\"scroll\"]');\n  if (sections.length) {\n    var animaScroll = function animaScroll() {\n      sections.forEach(function (section) {\n        var sectionTop = section.getBoundingClientRect().top;\n        var isSectionVisible = sectionTop - windowMetade < 0;\n        if (isSectionVisible) {\n          section.classList.add('ativo');\n        } else if (section.classList.contains('ativo')) section.classList.remove('ativo');\n      });\n    };\n    var windowMetade = window.innerHeight * 0.6;\n    animaScroll();\n    window.addEventListener('scroll', animaScroll);\n  }\n}\n\n//# sourceURL=webpack://eslint-webpack/./js/modules/InitAnimaScroll.js?");
+
+/***/ }),
+
+/***/ "./js/modules/LinkInternoMenu.js":
+/*!***************************************!*\
+  !*** ./js/modules/LinkInternoMenu.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ linkInternoMenu)\n/* harmony export */ });\nfunction linkInternoMenu() {\n  var linkInterno = document.querySelectorAll('[data-menu=\"suave\"] a[href^=\"#\"');\n  function scrolltoSection(event) {\n    event.preventDefault();\n    var href = event.currentTarget.getAttribute('href');\n    var section = document.querySelector(href);\n    section.scrollIntoView({\n      behavior: \"smooth\",\n      block: \"start\"\n    });\n\n    // (Forma Alternativa)\n    // const top = section.offsetTop\n    // window.scrollTo({\n    //   top: top, \n    //   behavior: \"smooth\", \n    // }); \n  }\n  linkInterno.forEach(function (link) {\n    link.addEventListener('click', scrolltoSection);\n  });\n}\n\n//# sourceURL=webpack://eslint-webpack/./js/modules/LinkInternoMenu.js?");
+
+/***/ }),
+
+>>>>>>> main
 /***/ "./js/modules/animaNumeros.js":
 /*!************************************!*\
   !*** ./js/modules/animaNumeros.js ***!
@@ -97,6 +125,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./js/modules/linkInternoMenu.js":
 /*!***************************************!*\
   !*** ./js/modules/linkInternoMenu.js ***!
@@ -108,6 +137,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+=======
+>>>>>>> main
 /***/ "./js/modules/menumobile.js":
 /*!**********************************!*\
   !*** ./js/modules/menumobile.js ***!
@@ -159,7 +190,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+<<<<<<< HEAD
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/initTabNav.js */ \"./js/modules/initTabNav.js\");\n/* harmony import */ var _modules_AnimaScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/AnimaScroll */ \"./js/modules/AnimaScroll.js\");\n/* harmony import */ var _modules_linkInternoMenu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/linkInternoMenu.js */ \"./js/modules/linkInternoMenu.js\");\n/* harmony import */ var _modules_InitAccordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/InitAccordion.js */ \"./js/modules/InitAccordion.js\");\n/* harmony import */ var _modules_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal.js */ \"./js/modules/modal.js\");\n/* harmony import */ var _modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tooltip.js */ \"./js/modules/tooltip.js\");\n/* harmony import */ var _modules_dropdown_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/dropdown.js */ \"./js/modules/dropdown.js\");\n/* harmony import */ var _modules_menumobile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/menumobile.js */ \"./js/modules/menumobile.js\");\n/* harmony import */ var _modules_funcionamento_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/funcionamento.js */ \"./js/modules/funcionamento.js\");\n/* harmony import */ var _modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fetch-animais.js */ \"./js/modules/fetch-animais.js\");\n/* harmony import */ var _modules_fetch_btc_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/fetch-btc.js */ \"./js/modules/fetch-btc.js\");\n\n\n\n\n\n\n\n\n\n\n\nvar Scrollsuave = new _modules_linkInternoMenu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]('[data-menu=\"suave\"] a[href^=\"#\"]');\n(0,_modules_dropdown_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\nScrollsuave.init();\n(0,_modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_AnimaScroll__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_InitAccordion_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_menumobile_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n(0,_modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"])();\n(0,_modules_funcionamento_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n(0,_modules_fetch_btc_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"])();\n\n//# sourceURL=webpack://eslint-webpack/./js/script.js?");
+=======
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/initTabNav.js */ \"./js/modules/initTabNav.js\");\n/* harmony import */ var _modules_InitAnimaScroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/InitAnimaScroll.js */ \"./js/modules/InitAnimaScroll.js\");\n/* harmony import */ var _modules_LinkInternoMenu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LinkInternoMenu.js */ \"./js/modules/LinkInternoMenu.js\");\n/* harmony import */ var _modules_InitAccordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/InitAccordion.js */ \"./js/modules/InitAccordion.js\");\n/* harmony import */ var _modules_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal.js */ \"./js/modules/modal.js\");\n/* harmony import */ var _modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tooltip.js */ \"./js/modules/tooltip.js\");\n/* harmony import */ var _modules_dropdown_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/dropdown.js */ \"./js/modules/dropdown.js\");\n/* harmony import */ var _modules_menumobile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/menumobile.js */ \"./js/modules/menumobile.js\");\n/* harmony import */ var _modules_funcionamento_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/funcionamento.js */ \"./js/modules/funcionamento.js\");\n/* harmony import */ var _modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fetch-animais.js */ \"./js/modules/fetch-animais.js\");\n/* harmony import */ var _modules_fetch_btc_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/fetch-btc.js */ \"./js/modules/fetch-btc.js\");\n\n\n\n\n\n\n\n\n\n\n\n(0,_modules_dropdown_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n(0,_modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_InitAnimaScroll_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_LinkInternoMenu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_InitAccordion_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_menumobile_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n(0,_modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"])();\n(0,_modules_funcionamento_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n(0,_modules_fetch_btc_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"])();\n\n//# sourceURL=webpack://eslint-webpack/./js/script.js?");
+>>>>>>> main
 
 /***/ }),
 
@@ -202,6 +237,7 @@ eval("// TODO(Babel 8): Remove this file.\n\nvar runtime = __webpack_require__(/
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(n, t, e, r, o, a, c) {\n  try {\n    var i = n[a](c),\n      u = i.value;\n  } catch (n) {\n    return void e(n);\n  }\n  i.done ? t(u) : Promise.resolve(u).then(r, o);\n}\nfunction _asyncToGenerator(n) {\n  return function () {\n    var t = this,\n      e = arguments;\n    return new Promise(function (r, o) {\n      var a = n.apply(t, e);\n      function _next(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n);\n      }\n      function _throw(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n);\n      }\n      _next(void 0);\n    });\n  };\n}\n\n\n//# sourceURL=webpack://eslint-webpack/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?");
 
+<<<<<<< HEAD
 /***/ }),
 
 /***/ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js":
@@ -257,6 +293,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _typeof)\n/* harmony export */ });\nfunction _typeof(o) {\n  \"@babel/helpers - typeof\";\n\n  return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) {\n    return typeof o;\n  } : function (o) {\n    return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o;\n  }, _typeof(o);\n}\n\n\n//# sourceURL=webpack://eslint-webpack/./node_modules/@babel/runtime/helpers/esm/typeof.js?");
 
+=======
+>>>>>>> main
 /***/ })
 
 /******/ 	});

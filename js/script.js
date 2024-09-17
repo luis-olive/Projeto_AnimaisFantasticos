@@ -10,10 +10,10 @@ import initFuncionamento from "./modules/funcionamento.js"
 import initFetchAnimais from "./modules/fetch-animais.js"
 import initFetchBtc from "./modules/fetch-btc.js"
 
-const Scrollsuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]')
+const Scrollsuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+Scrollsuave.init()
 
 initDropDown()
-Scrollsuave.init()
 
 initTabNav()
 initAnimaScroll()

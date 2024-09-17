@@ -1,41 +1,30 @@
-export default class linkInternoMenu {
+export default class ScrollSuave {
 constructor(links,options){
-  this.linkInterno = document.querySelectorAll(links)
-  if(options === undefined){ 
-    this.options = {behavior: "smooth", block: "start"};
-  } else { 
-    this.options = options; 
+    this.linkInterno = document.querySelectorAll(links)
+    if(options === undefined){ 
+      this.options = {behavior: "smooth", block: "start"};
+    } else { 
+      this.options = options; 
+    }
+    this.scrolltoSection = this.scrolltoSection.bind(this)
   }
-  this.scrolltoSection = this.scrolltoSection.bind(this)
-}
-  scrolltoSection(event){
-    event.preventDefault();
+    scrolltoSection(event){
+    event.preventDefault()
     const href = event.currentTarget.getAttribute('href')
     const section = document.querySelector(href);
+    section.scrollIntoView(this.options);
+  }
 
-section.scrollIntoView({
-  behavior: "smooth",
-  block: "start", 
-});
-
-// (Forma Alternativa)
-  // const top = section.offsetTop
-  // window.scrollTo({
-  //   top: top, 
-  //   behavior: "smooth", 
-  // }); 
-}
 
   addLinkEvent() { 
     this.linkInterno.forEach((link) => {
-      link.addEventListener('click', this.scrolltoSection)
-    
-    })
+      link.addEventListener('click', this.scrolltoSection);
+    });
   }
 
   init(){ 
-    if(this.linkInterno.lenght)
-    this.addLinkEvent()
+    if(this.linkInterno.lenght);
+    this.addLinkEvent();
     return this
   }
 }

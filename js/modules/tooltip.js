@@ -15,7 +15,6 @@ export default function initToolTip(){
     onMouseLeave.tooltipBox = tooltipBox;
 
     this.addEventListener('mouseleave', onMouseLeave)
-
     this.addEventListener('mousemove', onMouseMove)
     onMouseMove.tooltipBox = tooltipBox;
 

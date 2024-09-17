@@ -1,10 +1,17 @@
-export default function linkInternoMenu() {
-  const linkInterno = document.querySelectorAll('[data-menu="suave"] a[href^="#"')
-
-function scrolltoSection(event){
-  event.preventDefault();
-  const href = event.currentTarget.getAttribute('href')
-  const section = document.querySelector(href);
+export default class linkInternoMenu {
+constructor(links,options){
+  this.linkInterno = document.querySelectorAll(links)
+  if(options === undefined){ 
+    this.options = {behavior: "smooth", block: "start"};
+  } else { 
+    this.options = options; 
+  }
+  this.scrolltoSection = this.scrolltoSection.bind(this)
+}
+  scrolltoSection(event){
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href')
+    const section = document.querySelector(href);
 
 section.scrollIntoView({
   behavior: "smooth",
@@ -19,8 +26,16 @@ section.scrollIntoView({
   // }); 
 }
 
-linkInterno.forEach((link) => {
-  link.addEventListener('click',scrolltoSection)
-
-})
+  addLinkEvent() { 
+    this.linkInterno.forEach((link) => {
+      link.addEventListener('click', this.scrolltoSection)
+    
+    })
   }
+
+  init(){ 
+    if(this.linkInterno.lenght)
+    this.addLinkEvent()
+    return this
+  }
+}

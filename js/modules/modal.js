@@ -25,7 +25,6 @@ eventToggleModal(e){
 }
 
   clickOutModal(e){ 
-    console.log(e.target)
       if (e.target === this.containerModal){ 
         this.toggelModal(e);
       }

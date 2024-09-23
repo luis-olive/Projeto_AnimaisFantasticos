@@ -2,7 +2,7 @@ import TabNav from "./modules/TabNav.js";
 import Accordion from "./modules/accordion.js";
 import ScrollSuave from "./modules/linkInternoMenu.js"
 import Modal from "./modules/modal.js"
-import initToolTip from "./modules/tooltip.js";
+import ToolTip from "./modules/tooltip.js";
 import initDropDown from "./modules/dropdown.js";
 import initMenuMobile from "./modules/menumobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
@@ -20,10 +20,11 @@ const Tabnav = new TabNav('[data-tab="tabmenu"] li', '[data-tab="content"] secti
 Tabnav.initNav()
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]')
 modal.init()
+const tooltip = new ToolTip('[data-tooltip]')
+tooltip.init()
 
 initDropDown()
 initAnimaScroll()
-initToolTip()
 initMenuMobile()
 initFetchAnimais()
 initFuncionamento()

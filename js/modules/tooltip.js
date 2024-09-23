@@ -1,53 +1,59 @@
-export default function initToolTip(){
+export default class initToolTip { 
+constructor(tooltip){ 
 
-  const tooltip = document.querySelectorAll('[data-tooltip]')
+  this.tooltip = document.querySelectorAll(tooltip)
 
-  tooltip.forEach((item) => {
-    item.addEventListener('mouseover', onMouseOver)
-  })
+  // Bind do objeto da classe aos callbacks
+  this.onMouseOver = this.onMouseOver.bind(this)
+  this.onMouseMove =  this.onMouseMove.bind(this)
+  this.onMouseLeave = this.onMouseLeave.bind(this)
+}
 
-  function onMouseOver(e) {
-    const tooltipBox = criarToolTipBox(this)
-    tooltipBox.style.top = e.pageY + 'px'; 
-    tooltipBox.style.left = e.pageX + 'px'; 
-    
-    onMouseLeave.element = this 
-    onMouseLeave.tooltipBox = tooltipBox;
+  onMouseMove(e) {  
+    console.log(e.pageX, window.innerWidth)
+    this.tooltipBox.style.top = `${e.pageY + 20}px`;
+    if (e.pageX + 240 > window.innerWidth) {
+      this.tooltipBox.style.left = `${e.pageX - 190}px`; 
+    } else {
+      this.tooltipBox.style.left = `${e.pageX + 20}px`;
+  } 
+}
 
-    this.addEventListener('mouseleave', onMouseLeave)
-    this.addEventListener('mousemove', onMouseMove)
-    onMouseMove.tooltipBox = tooltipBox;
-
-
-  }
-
-  const onMouseLeave = { 
-    tooltipBox: '', 
-    element: '',
-    handleEvent(){ 
-    this.tooltipBox.remove()
-    this.removeEventListener('mouseleave', onMouseLeave)
-    this.removeEventListener('mousemove', onMouseMove)
+  
+    onMouseLeave({currentTarget}) {  
+    this.tooltipBox.remove();
+    currentTarget.removeEventListener('mouseleave', this.onMouseLeave)
+    currentTarget.removeEventListener('mousemove', this.onMouseMove)
     }    
-  }
-
-  const onMouseMove = { 
-    handleEvent(event){
-      this.tooltipBox.style.top = event.pageY + 20 + 'px'
-      this.tooltipBox.style.left = event.pageX + 20 + 'px'
-    }
-  }
 
 
 
-
-
-  function criarToolTipBox(element){ 
+  criarToolTipBox(element){ 
     const tooltipBox = document.createElement('div')
     const text = element.getAttribute('aria-label')
     tooltipBox.classList.add('tooltip')
     tooltipBox.innerText = text; 
     document.body.appendChild(tooltipBox)
-    return tooltipBox
+    this.tooltipBox =  tooltipBox
+  }
+
+  
+  onMouseOver({currentTarget}) {
+    this.criarToolTipBox(currentTarget);
+    currentTarget.addEventListener('mouseleave', this.onMouseLeave);
+    currentTarget.addEventListener('mousemove', this.onMouseMove);
+  }
+
+  addTooltipsEvent(){ 
+    this.tooltip.forEach((item) =>{ 
+      item.addEventListener('mouseover', this.onMouseOver )
+    });
+  }
+
+  init() { 
+  if(this.tooltip.length){
+    this.addTooltipsEvent()
+  } 
+    return this;
   }
 }

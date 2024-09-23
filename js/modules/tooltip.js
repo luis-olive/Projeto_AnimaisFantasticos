@@ -10,7 +10,6 @@ constructor(tooltip){
 }
 
   onMouseMove(e) {  
-    console.log(e.pageX, window.innerWidth)
     this.tooltipBox.style.top = `${e.pageY + 20}px`;
     if (e.pageX + 240 > window.innerWidth) {
       this.tooltipBox.style.left = `${e.pageX - 190}px`; 

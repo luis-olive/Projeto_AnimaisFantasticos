@@ -23,7 +23,7 @@ modal.init()
 const tooltip = new ToolTip('[data-tooltip]')
 tooltip.init()
 
-FetchAnimais('../../animaisapi.json', '.numeros-grid')
+FetchAnimais('api/animaisapi.json', '.numeros-grid')
 
 
 

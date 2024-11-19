@@ -12,22 +12,25 @@ import ScrollAnima from "./modules/scrollAnima";
 
 
 const Scrollsuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
-Scrollsuave.init();
+Scrollsuave.init()
+
 const accordion = new Accordion('[data-anime="accordion"] dt');
-accordion.init();
+accordion.init()
 
 const Tabnav = new TabNav('[data-tab="tabmenu"] li', '[data-tab="content"] section');
-Tabnav.initNav();
+Tabnav.initNav()
+
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
-modal.init();
+modal.init()
+
 const tooltip = new ToolTip('[data-tooltip]');
-tooltip.init();
+tooltip.init()
 
 const scrollanima = new ScrollAnima('[data-anime="scroll"]');
-scrollanima.init();
+scrollanima.init()
 
 const DropdownMenu = new dropdownMenu('[data-dropdown]');
-DropdownMenu.init();
+DropdownMenu.init()
 
 
 FetchAnimais('api/animaisapi.json', '.numeros-grid')

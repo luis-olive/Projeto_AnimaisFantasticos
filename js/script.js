@@ -4,7 +4,7 @@ import ScrollSuave from "./modules/linkInternoMenu.js"
 import Modal from "./modules/modal.js"
 import ToolTip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown.js";
-import initMenuMobile from "./modules/menumobile.js"
+import MenuMobile from "./modules/menumobile.js"
 import initFuncionamento from "./modules/funcionamento.js"
 import FetchAnimais from "./modules/fetch-animais.js"
 import FetchBtc from "./modules/fetch-btc.js"
@@ -32,9 +32,11 @@ scrollanima.init()
 const DropdownMenu = new dropdownMenu('[data-dropdown]');
 DropdownMenu.init()
 
+const menuMobile = new MenuMobile('[data-menu="button"]','[data-menu="list"]');
+menuMobile.init()
+
 
 FetchAnimais('api/animaisapi.json', '.numeros-grid')
 FetchBtc('https://blockchain.info/ticker', '.btc-preco')
 
-initMenuMobile()
 initFuncionamento()

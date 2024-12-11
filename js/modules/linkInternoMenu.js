@@ -25,6 +25,6 @@ constructor(links,options){
   init(){ 
     if(this.linkInterno.lenght);
     this.addLinkEvent();
-    return this
+    return this;
   }
 }

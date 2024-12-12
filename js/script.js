@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import ToolTip from "./modules/tooltip.js";
 import menuMobile from "./modules/menumobile.js";
 import dropdownMenu from "./modules/dropdown.js";
-import initFuncionamento from "./modules/funcionamento.js";
+import Funcionamento from "./modules/funcionamento.js";
 import FetchAnimais from "./modules/fetch-animais.js";
 import FetchBtc from "./modules/fetch-btc.js";
 import ScrollAnima from "./modules/scrollAnima";
@@ -35,8 +35,9 @@ DropdownMenu.init()
 const menumobile = new menuMobile('[data-menu="list"]','[data-menu="button"]');
 menumobile.init()
 
+const funcionamento = new Funcionamento('[data-semana]');
+funcionamento.init()
 
 FetchAnimais('api/animaisapi.json', '.numeros-grid')
 FetchBtc('https://blockchain.info/ticker', '.btc-preco')
 
-initFuncionamento()

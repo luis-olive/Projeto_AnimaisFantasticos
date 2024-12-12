@@ -36,7 +36,6 @@ const menumobile = new menuMobile('[data-menu="list"]','[data-menu="button"]');
 menumobile.init()
 
 const funcionamento = new Funcionamento('[data-semana]');
-console.log(funcionamento)
 funcionamento.init()
 
 FetchAnimais('api/animaisapi.json', '.numeros-grid')

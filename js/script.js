@@ -34,10 +34,10 @@ scrollanima.init()
 const DropdownMenu = new dropdownMenu('[data-dropdown]');
 DropdownMenu.init()
 
-const menumobile = new menuMobile('[data-menu="list"]','[data-menu="button"]');
+const menumobile = new menuMobile('[data-menu="button"]','[data-menu="list"]');
 menumobile.init()
 
-const funcionamento = new Funcionamento('[data-semana]');
+const funcionamento = new Funcionamento('[data-semana]','aberto');
 funcionamento.init()
 
 const slide = new SlideNav('.slide', '.slide-wrapper'); 

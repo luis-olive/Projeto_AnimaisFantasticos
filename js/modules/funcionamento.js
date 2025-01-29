@@ -2,7 +2,7 @@ export default class  Funcionamento{
   constructor(funcionamento, activeclass){ 
 
     this.funcionamento = document.querySelector(funcionamento)
-    this.activeclass = activeclass
+    this.activeclass = activeclass;
   }
   dadosFuncionamento(){ 
     this.diasSemana = this.funcionamento.dataset.semana.split(',').map(Number);
@@ -28,13 +28,13 @@ export default class  Funcionamento{
     }    
     init(){
       if(this.funcionamento){
-      this.dadosFuncionamento()
-      this.dadosAgora()
-      this.ativaAberto();
+        this.dadosFuncionamento()
+        this.dadosAgora()
+        this.ativaAberto();
+      }
       return this;
     }
   }
-}
 
 // Alert
 

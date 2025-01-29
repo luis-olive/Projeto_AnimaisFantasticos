@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pt-br">
 <head>
   <script>
     document.documentElement.className += ' js';  
@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair&family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 
@@ -30,7 +33,7 @@
       </li>
       <li><a href="#faq">Faq</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a data-modal="abrir" href="">Login →</a></li>
+      <li><a data-modal="abrir" href="">Login<span class="arrow-black"></span></a></li>
       </ul>
     </nav>
 
@@ -120,7 +123,7 @@
     </dl>
   </section>
 
-<section class="grid-section galeria" data-anime="scroll" id="contato">
+<section class="grid-section galeria" data-anime="scroll" id="galeria">
   <ul class="custom-controls">
     <li><img src="img/imgSlide/foto1-thumb.jpg" alt=""></li>
     <li><img src="img/imgSlide/foto2-thumb.jpg" alt=""></li>
@@ -156,12 +159,12 @@
       <img src="./img/mapa.png" alt="Map">
     </div>
     <ul class="dados">
-      <li>contato@origamid.com</li>
-      <li>(21)9720-95417</li>
+      <li><a href="mailto:luisoliveira.me.com">luisoliveira.me.com</a></li>
+      <li>(21) 97209-5417</li>
       <li>Rua do conde nº8</li>
       <li>Doe <span class="btc-preco">0</span> para nos ajudar</li>
       <li>Maricá - RJ</li>
-      <li data-semana="1,2,3,4,5" data-horario="8,18">Seg a Sexta das 8 às 18</li>
+      <li data-semana="1,2,3,4,5" data-horario="8,18">Seg a Sexta das 8h às 18h</li>
     </ul>
   </section>
 
@@ -172,7 +175,7 @@
 
 <section class="modal-container" data-modal="container"> 
   <div class="modal"> 
-    <button data-modal="fechar" class="fechar">X</button>
+    <button data-modal="fechar" class="fechar"></button>
     <form action=""> 
       <label for="email">Email</label>
       <input type="text" for="email" id="email">

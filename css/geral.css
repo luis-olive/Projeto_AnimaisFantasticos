@@ -56,11 +56,11 @@ body {
   margin-right: 10px;
   color: #222;
   text-decoration: none;
-  font-family: "IMB Plex" monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
-letter-spacing: .1rem;
+  letter-spacing: .1rem;
 }
 
 .grid-section {
@@ -121,6 +121,7 @@ cursor: pointer;
   background: #fb5;
   border-left:  4px solid #faf6ed;
   border-right: 4px solid #faf6ed;
+  border-radius: 1px;
 }
 .animais-lista::-webkit-scrollbar-track{
   background: #faf6ed;
@@ -178,6 +179,12 @@ grid-column: 2 / 4;
   font-family: helvetica, arial;
 }
 
+.dados li a {
+color: #e54;
+font-family: "IBM Plex Mono", monospace;
+}
+
+
 .dados li::before {
   content: "";
   display: inline-block;
@@ -210,7 +217,8 @@ grid-column: 2 / 4;
   }
   .grid-section {
     grid-template-columns:  100px 1fr;
-    gap: 10px;
+    grid-gap: 10px;
+    padding: 10px;
   }
   .animais-lista {
     grid-column: 1;
@@ -283,11 +291,21 @@ display: block !important;
 }
 
 .js [data-anime="accordion"] dt::after {
-content: "⬎";
+content: "";
+width: 10px;
+height: 10px;
+display: inline-block;
+background: url(../img/arrow-red.svg) no-repeat center;
 margin-left: 10px;
 }
 .js [data-anime="accordion"] dt.ativo::after {
-content: "⬏";
+content: "";
+width: 10px;
+height: 10px;
+display: inline-block;
+background: url(../img/arrow-red.svg) no-repeat center;
+transform: rotate(90deg);
+transition: transform .3s;
 }
 
 @keyframes Slidedown {
@@ -333,4 +351,17 @@ transition: .8s ;
   padding: .2rem .5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrow-black {
+  display: inline-block;
+  width: 8px;
+  height: 10px; 
+  background: url(../img/arrow-black.svg) no-repeat center;
+}
+
+@media (max-width: 700px) {
+  .grid-section h1 { 
+    font-size: 2.5rem;
+  }
 }

@@ -10,7 +10,7 @@
 [data-dropdown]:hover .dropdown-menu,
 [data-dropdown].active .dropdown-menu { 
   display: block;
-animation: show-up .3s forwards ;
+  animation: show-up .3s forwards ;
 } 
 
 @keyframes show-up { 
@@ -52,4 +52,11 @@ border-bottom: 11px solid #e54;
 .dropdown-menu li a:hover{ 
   color: #fff;
 
+}
+
+@media (max-width: 700px) { 
+  [data-dropdown] .dropdown-menu{
+  display: block;
+  animation: show-up .3s forwards ;
+  } 
 }
